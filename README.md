@@ -1,12 +1,6 @@
 API Deployment Task
 Integrated System Technology
 
-Team member:
-Faisal Helmi Wicaksono     / 18219025
-Christopher Davin Leoputra / 18219037
-Ari Pardomuan Manurung     / 18219045
-Edwin Stanic Prasetyo      / 18219079
-
 To run this Sistar Registration API:
 1. Clone this repository locally then push to your repository
 2. Create account or login to heroku
