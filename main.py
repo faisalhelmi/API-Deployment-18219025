@@ -146,11 +146,11 @@ async def read_tutor(tutor_id: int, current_user: User = Depends(get_current_act
         
 #mengubah nama tutor
 @app.put('/datatutor/{tutorid}') 
-async def edit_name(tutor_id: int,nama: str, current_user: User = Depends(get_current_active_user)): 
+async def edit_name(tutor_id: int,name: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
         if list_tutor['tutorid'] == tutor_id:
-            list_tutor['nama']=nama
+            list_tutor['nama']=name
             read_file.close()
             with open("tutor.json", "w") as write_file: 
                 json.dump(data,write_file)
@@ -173,6 +173,40 @@ async def edit_email(tutor_id: int,email: str, current_user: User = Depends(get_
                 json.dump(data,write_file)
             write_file.close()
             return{'message':'Email Updated'}
+
+    raise HTTPException(
+        status_code=404, detail=f'Tutor not found'
+    )
+
+#mengubah tempat lahir tutor
+@app.put('/datatutor/{tutorid}') 
+async def edit_email(tutor_id: int,tempat_lahir: str, current_user: User = Depends(get_current_active_user)): 
+
+    for list_tutor in data['Data Tutor']:
+        if list_tutor['tutorid'] == tutor_id:
+            list_tutor['tempatlahir']=tempat_lahir
+            read_file.close()
+            with open("tutor.json", "w") as write_file: 
+                json.dump(data,write_file)
+            write_file.close()
+            return{'message':'Tempat Lahir Updated'}
+
+    raise HTTPException(
+        status_code=404, detail=f'Tutor not found'
+    )
+
+#mengubah universitas tutor
+@app.put('/datatutor/{tutorid}') 
+async def edit_email(tutor_id: int,university: str, current_user: User = Depends(get_current_active_user)): 
+
+    for list_tutor in data['Data Tutor']:
+        if list_tutor['tutorid'] == tutor_id:
+            list_tutor['universitas']=university
+            read_file.close()
+            with open("tutor.json", "w") as write_file: 
+                json.dump(data,write_file)
+            write_file.close()
+            return{'message':'Universitas Updated'}
 
     raise HTTPException(
         status_code=404, detail=f'Tutor not found'
