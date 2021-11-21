@@ -152,13 +152,13 @@ async def edit_name(tutor_id: int,nama: str, current_user: User = Depends(get_cu
         if list_tutor['tutorid'] == tutor_id:
             list_tutor['nama']=nama
             read_file.close()
-            with open("menu.json", "w") as write_file: 
+            with open("tutor.json", "w") as write_file: 
                 json.dump(data,write_file)
             write_file.close()
             return{'message':'Nama Updated'}
 
     raise HTTPException(
-        status_code=404, detail=f'Item not found'
+        status_code=404, detail=f'Tutor not found'
     )
 
 #mengubah email tutor
@@ -169,11 +169,11 @@ async def edit_email(tutor_id: int,email: str, current_user: User = Depends(get_
         if list_tutor['tutorid'] == tutor_id:
             list_tutor['email']=email
             read_file.close()
-            with open("menu.json", "w") as write_file: 
+            with open("tutor.json", "w") as write_file: 
                 json.dump(data,write_file)
             write_file.close()
             return{'message':'Email Updated'}
 
     raise HTTPException(
-        status_code=404, detail=f'Item not found'
+        status_code=404, detail=f'Tutor not found'
     )
