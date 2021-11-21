@@ -145,7 +145,7 @@ async def read_tutor(tutor_id: int, current_user: User = Depends(get_current_act
         )
         
 #mengubah nama tutor
-@app.put('/datatutor/{tutorid}') 
+@app.put('/ubahnamatutor/{tutorid}') 
 async def edit_name(tutor_id: int,name: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
@@ -162,7 +162,7 @@ async def edit_name(tutor_id: int,name: str, current_user: User = Depends(get_cu
     )
 
 #mengubah email tutor
-@app.put('/datatutor/{tutorid}') 
+@app.put('/ubahemailtutor/{tutorid}') 
 async def edit_email(tutor_id: int,email: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
@@ -179,7 +179,7 @@ async def edit_email(tutor_id: int,email: str, current_user: User = Depends(get_
     )
 
 #mengubah tempat lahir tutor
-@app.put('/datatutor/{tutorid}') 
+@app.put('/ubahtempatlahirtutor/{tutorid}') 
 async def edit_email(tutor_id: int,tempat_lahir: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
@@ -196,7 +196,7 @@ async def edit_email(tutor_id: int,tempat_lahir: str, current_user: User = Depen
     )
 
 #mengubah universitas tutor
-@app.put('/datatutor/{tutorid}') 
+@app.put('/ubahuniversitastutor/{tutorid}') 
 async def edit_email(tutor_id: int,university: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
