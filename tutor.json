@@ -4,18 +4,24 @@
             "tutorid": 1,
             "nama": "Jane Doe",
             "email": "janedoe@gmail.com",
+            "tempatlahir": "Jakarta",
+            "universitas": "Universitas Indonesia",
             "status": "not checked"
         },
         {
             "tutorid": 2,
             "nama": "Chris Norman",
             "email": "normanchris@gmail.com",
+            "tempatlahir": "Bandung",
+            "universitas": "Institut Teknologi Bandung",
             "status": "not checked"
         }, 
         {
             "tutorid": 3,
-            "nama": "Tilda MOss",
+            "nama": "Tilda Moss",
             "email": "moss.til@gmail.com",
+            "tempatlahir": "Jakarta",
+            "universitas": "Universitas Indonesia",
             "status": "not checked"
         }
     ]
