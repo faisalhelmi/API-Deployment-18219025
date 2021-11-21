@@ -1,0 +1,22 @@
+{
+    "Data Tutor": [
+        {
+            "tutorid": 1,
+            "nama": "Jane Doe",
+            "email": "janedoe@gmail.com",
+            "status": "not checked"
+        },
+        {
+            "tutorid": 2,
+            "nama": "Chris Norman",
+            "email": "normanchris@gmail.com",
+            "status": "not checked"
+        }, 
+        {
+            "tutorid": 3,
+            "nama": "Tilda MOss",
+            "email": "moss.til@gmail.com",
+            "status": "not checked"
+        }
+    ]
+}
