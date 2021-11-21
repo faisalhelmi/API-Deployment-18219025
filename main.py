@@ -180,7 +180,7 @@ async def edit_email(tutor_id: int,email: str, current_user: User = Depends(get_
 
 #mengubah tempat lahir tutor
 @app.put('/ubahtempatlahirtutor/{tutorid}') 
-async def edit_email(tutor_id: int,tempat_lahir: str, current_user: User = Depends(get_current_active_user)): 
+async def edit_tempat_lahir(tutor_id: int,tempat_lahir: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
         if list_tutor['tutorid'] == tutor_id:
@@ -197,7 +197,7 @@ async def edit_email(tutor_id: int,tempat_lahir: str, current_user: User = Depen
 
 #mengubah universitas tutor
 @app.put('/ubahuniversitastutor/{tutorid}') 
-async def edit_email(tutor_id: int,university: str, current_user: User = Depends(get_current_active_user)): 
+async def edit_universitas(tutor_id: int,university: str, current_user: User = Depends(get_current_active_user)): 
 
     for list_tutor in data['Data Tutor']:
         if list_tutor['tutorid'] == tutor_id:
